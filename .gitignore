@@ -1,0 +1,6 @@
+# macOS noise
+._*
+.DS_Store
+
+# Local Netlify folder
+.netlify
