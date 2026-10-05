@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy | GooCampus USA</title>
+<meta name="description" content="What information GooCampus collects through our USMLE and Match consulting services, how we use it, and the rights you have in relation to it." />
+<meta name="robots" content="index,follow" />
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    container: { center: true, padding: '1.5rem', screens: { '2xl': '1200px' } },
+    extend: {
+      colors: {
+        ink:     '#3C3B6E',
+        inkDeep: '#2A2950',
+        body:    '#55556B',
+        accent:  '#B22234',
+        cta:     '#B22234',
+        periwinkle: '#B9BAE6',
+        paper:   '#F6F6F8',
+        line:    'rgba(0,0,0,.08)',
+      },
+      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+      borderRadius: { btn: '12px', card: '16px', xl2: '24px' },
+    },
+  },
+}
+</script>
+<style>
+  /* Banner, nav, buttons and footer are the landing page's own, so this reads
+     as part of the site rather than a separate page. Only the legal-prose
+     rules at the bottom are specific to it. */
+  :root { color-scheme: light; }
+  html { scroll-behavior: smooth; }
+  body { background:#F6F6F8; color:#3C3B6E; font-family:Inter,ui-sans-serif,system-ui,sans-serif;
+         font-variation-settings:'opsz' 16; -webkit-font-smoothing:antialiased; }
+
+  .display { font-variation-settings:'opsz' 32; font-weight:500; }
+  .t-h1 { font-size:clamp(2.25rem,5vw,60px); line-height:1.04; letter-spacing:-0.042em; }
+  .lead { font-size:18px; line-height:30px; color:#55556B; max-width:56ch; }
+  p.copy { font-size:16px; line-height:27.2px; color:#55556B; max-width:68ch; }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+         height:52px; padding:0 22px; border-radius:12px; font-size:15px; font-weight:600;
+         white-space:nowrap; transition:background-color .2s, color .2s, border-color .2s, transform .2s cubic-bezier(.16,1,.3,1); }
+  .btn:active { transform:translateY(1px); }
+  .btn-cta   { background:#B22234; color:#fff; }
+  .btn-cta:hover { background:#8C1B29; }
+  .btn-sm { height:44px; padding:0 20px; font-size:14px; }
+
+  .rule { border-top:1px solid rgba(0,0,0,.08); }
+
+  #nav nav a, #mobileMenu a:not(.btn), footer ul a { display:inline-flex; align-items:center; min-height:44px; }
+
+  /* --- legal prose ---------------------------------------------------- */
+  .sec { scroll-margin-top:150px; }
+  .sec + .sec { margin-top:2.75rem; padding-top:2.75rem; border-top:1px solid rgba(0,0,0,.08); }
+  .prose p.sec-num { font-size:13px; font-weight:700; letter-spacing:.12em; color:#B22234;
+             font-variant-numeric:tabular-nums lining-nums; }
+  .prose h2 { font-size:clamp(1.3rem,2.2vw,1.6rem); line-height:1.25; letter-spacing:-.02em;
+              font-weight:600; color:#3C3B6E; margin-top:.5rem; }
+  .prose h3 { font-size:17px; font-weight:600; color:#3C3B6E; margin-top:1.75rem; }
+  .prose p { font-size:16px; line-height:28px; color:#55556B; margin-top:1rem; max-width:72ch; }
+  .prose ul { margin-top:1rem; max-width:72ch; list-style:none; }
+  .prose li { position:relative; padding-left:1.6rem; font-size:16px; line-height:26px; color:#55556B; }
+  .prose li + li { margin-top:.6rem; }
+  .prose li::before { content:""; position:absolute; left:.1rem; top:.6em; width:8px; height:8px;
+                      border-radius:2px; background:#B22234; }
+  .prose strong { color:#3C3B6E; font-weight:600; }
+  .prose a { color:#B22234; text-decoration:underline; text-underline-offset:3px; }
+  .prose a:hover { color:#8C1B29; }
+
+  .callout { background:#fff; border:1px solid rgba(0,0,0,.08); border-left:3px solid #B22234;
+             border-radius:16px; padding:1.4rem 1.5rem; margin-top:1.25rem; }
+  .callout p:first-child { margin-top:0; }
+
+  .toc a { display:block; font-size:14px; line-height:1.35; color:#55556B; padding:7px 0;
+           font-variant-numeric:tabular-nums; transition:color .18s; }
+  .toc a:hover { color:#3C3B6E; }
+</style>
+</head>
+<body>
+
+<!-- Sticky banner — same as the landing page -->
+<div id="announce" class="relative bg-ink px-6 py-2.5 text-center text-[13px] text-white/90">
+  <span class="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+    <span>Book a free consultation — see our full list of services and how the program is structured.</span>
+    <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer"
+       class="font-semibold text-white underline underline-offset-4 hover:text-white/80">Schedule a Free Consultation</a>
+  </span>
+  <button onclick="document.getElementById('announce').remove()" aria-label="Dismiss announcement"
+          class="absolute right-2 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center text-white/60 transition hover:text-white">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<!-- Nav — same as the landing page -->
+<header id="nav" class="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-xl">
+  <div class="container flex h-[92px] items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5" aria-label="GooCampus USA — home">
+      <img src="assets/logo.png" alt="GooCampus USA" width="1134" height="1134" class="h-[68px] w-auto" />
+    </a>
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+      <a href="index.html" class="text-[15px] text-body transition hover:text-ink">Home</a>
+      <a href="index.html#program" class="text-[15px] text-body transition hover:text-ink">Standard Consulting Program</a>
+      <a href="index.html#included" class="text-[15px] text-body transition hover:text-ink">What&rsquo;s Included</a>
+      <a href="index.html#contact" class="text-[15px] text-body transition hover:text-ink">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer"
+         class="btn btn-cta btn-sm hidden sm:inline-flex">Schedule a Free Consultation</a>
+      <button id="navToggle" class="grid h-11 w-11 place-items-center rounded-btn border border-line bg-white lg:hidden" aria-label="Menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-line bg-white lg:hidden">
+    <div class="container flex flex-col py-3">
+      <a href="index.html" class="rounded-btn px-3 py-3 text-[15px] hover:bg-paper">Home</a>
+      <a href="index.html#program" class="rounded-btn px-3 py-3 text-[15px] hover:bg-paper">Standard Consulting Program</a>
+      <a href="index.html#included" class="rounded-btn px-3 py-3 text-[15px] hover:bg-paper">What&rsquo;s Included</a>
+      <a href="index.html#contact" class="rounded-btn px-3 py-3 text-[15px] hover:bg-paper">Contact</a>
+      <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-cta mt-2">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Title band -->
+  <section class="border-b border-line bg-white">
+    <div class="container py-14 lg:py-20">
+      <p class="text-[13px] font-semibold uppercase tracking-[.08em] text-accent">Legal</p>
+      <h1 class="display t-h1 mt-4 text-ink">Privacy Policy</h1>
+      <p class="lead mt-6">What information we collect, how we use it and what rights you have in relation to it.</p>
+      <p class="mt-8 text-[15px] text-body"><span class="font-semibold text-ink">Last updated on</span> 2 October 2026</p>
+    </div>
+  </section>
+
+  <div class="container py-14 lg:py-20">
+    <div class="grid gap-14 lg:grid-cols-[1fr_230px] lg:gap-20">
+
+      <div class="prose order-2 lg:order-1">
+
+        <section class="sec" id="intro">
+          <p class="sec-num">01</p>
+          <h2>Introduction</h2>
+          <p>Thank you for choosing to be part of our community at <strong>GooCampus Edu Solutions Private Limited</strong>, doing business as GooCampus (&ldquo;GooCampus&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). We are committed to protecting your personal information and your right to privacy.</p>
+          <p>This notice covers the information we collect through this website and through the USA consulting services described on it &mdash; our support for doctors pursuing <strong>ECFMG certification, the USMLE, clinical rotations, ERAS and the Match</strong>.</p>
+          <p>We are an education and career consulting firm. We are not a medical school, a residency programme, a government body, a recruitment agency or a visa agent, and we are not affiliated with ECFMG, the NBME, the FSMB or the NRMP. If you have questions about this notice or our practices, contact us at <a href="mailto:info@goocampus.in">info@goocampus.in</a>.</p>
+        </section>
+
+        <section class="sec" id="collect">
+          <p class="sec-num">02</p>
+          <h2>What information do we collect?</h2>
+
+          <h3>Personal information you disclose to us</h3>
+          <p>We collect personal information that you voluntarily provide when you book a consultation, enquire about the programme, message us, or enrol. Depending on how you interact with us, this may include:</p>
+          <ul>
+            <li>Name, phone number and email address</li>
+            <li>Country of residence, citizenship and visa status where relevant to eligibility</li>
+            <li>Your medical qualification, university, year of graduation and current registration status</li>
+            <li>Which stage of the USMLE and Match process you are at, and the specialties you are targeting</li>
+            <li>Exam attempts and scores where you choose to share them with us for planning</li>
+            <li>Documents you share for ECFMG setup, credential verification, rotations or ERAS support &mdash; transcripts, diplomas, CVs, personal statements and letters of recommendation</li>
+            <li>The content of any message you send us</li>
+          </ul>
+          <p>Some of this &mdash; your qualifications, exam history, visa status and the documents behind them &mdash; is sensitive. We collect it only with your consent, only where it is reasonably necessary to advise you or act on your behalf, and we do not use it for any other purpose.</p>
+
+          <h3>Information collected automatically</h3>
+          <p>When you visit this website, our hosting provider records standard technical information such as your IP address, browser type and version, device type, operating system, referring page, and the date and time of your visit. This keeps the site secure and working, and does not by itself identify you.</p>
+
+          <h3>Payment information</h3>
+          <div class="callout">
+            <p><strong>We do not collect or process any payment on this website.</strong> There is no checkout, no card form and no payment processor running on these pages. If you enrol in a paid programme, payment is arranged separately and handled by our finance team or a third-party payment provider, who will tell you at that time how your payment data is handled. <strong>We never ask for card details by email or over WhatsApp.</strong></p>
+          </div>
+        </section>
+
+        <section class="sec" id="use">
+          <p class="sec-num">03</p>
+          <h2>How do we use your information?</h2>
+          <p>We use personal information only for the purpose you gave it to us for, and for directly related purposes you would reasonably expect:</p>
+          <ul>
+            <li>To respond to your enquiry and schedule your consultation</li>
+            <li>To assess your eligibility and advise on specialty strategy, including visa realities</li>
+            <li>To build your USMLE preparation timeline and track milestones with you</li>
+            <li>To support ECFMG setup, credential verification and exam registration where you ask us to</li>
+            <li>To shortlist and apply for observerships, externships and electives on your behalf</li>
+            <li>To review your CV, personal statement and ERAS application, and to prepare you for interviews</li>
+            <li>To connect you with a physician mentor appropriate to your stage</li>
+            <li>To send service messages about a programme you are enrolled in</li>
+            <li>To send information about our programmes where you asked for it, or would reasonably expect it &mdash; you can opt out at any time</li>
+            <li>To improve and secure our website and services, and to meet our legal, accounting and record-keeping obligations</li>
+          </ul>
+          <p>We do not sell your personal information, and we do not use it to make automated decisions that produce a legal or similarly significant effect on you.</p>
+        </section>
+
+        <section class="sec" id="share">
+          <p class="sec-num">04</p>
+          <h2>Will your information be shared?</h2>
+          <p>We disclose personal information only where it is necessary to deliver what you have asked for, and only to parties bound to protect it:</p>
+          <ul>
+            <li><strong>Certification and examination bodies</strong> &mdash; where you have asked us to support an application, ECFMG and the relevant testing provider receive the information and documents needed for it</li>
+            <li><strong>Hospitals, clinics and rotation providers</strong> &mdash; where we apply for an observership, externship or elective on your behalf, including any background check they require</li>
+            <li><strong>Physician mentors</strong> working with us, who see only what is needed to advise you</li>
+            <li><strong>Form and scheduling providers</strong> that receive your enquiry on our behalf</li>
+            <li><strong>Messaging platforms</strong> &mdash; if you contact us on WhatsApp, your message and number are handled by WhatsApp (Meta) under its own terms as well as ours</li>
+            <li><strong>Email, storage and workflow providers</strong> we use to run the business and hold client records</li>
+            <li><strong>Professional advisers</strong> &mdash; accountants, auditors and lawyers &mdash; where required</li>
+            <li><strong>Government or regulatory bodies</strong> where the law requires disclosure</li>
+          </ul>
+          <p>We do not share your information with residency programmes, recruiters or any third party for their own marketing purposes. Your ERAS application is submitted by you, not by us.</p>
+        </section>
+
+        <section class="sec" id="overseas">
+          <p class="sec-num">05</p>
+          <h2>Where your information is held</h2>
+          <p>GooCampus is based in <strong>India</strong>, and our team accesses and stores client information there. Some service providers we use store data in the <strong>United States</strong> or elsewhere. Where you ask us to support an application, rotation or verification, your documents are transmitted to the relevant body in the <strong>United States</strong>.</p>
+          <p>This means your personal information will be held and processed outside your country of residence. By submitting it, you consent to that transfer. Recipients may be subject to laws that differ from those where you live. We take reasonable steps to ensure the providers we use have appropriate security and confidentiality protections in place.</p>
+          <p>As an Indian company we are subject to India&rsquo;s <strong>Digital Personal Data Protection Act, 2023</strong>. Where you are located elsewhere and local law gives you stronger protection, we apply the standard more protective of you.</p>
+        </section>
+
+        <section class="sec" id="cookies">
+          <p class="sec-num">06</p>
+          <h2>Cookies</h2>
+          <p>This website uses only what is necessary to serve the pages and load fonts. We do not currently run advertising pixels or third-party analytics on these pages.</p>
+          <p>Third-party services embedded in or linked from the site may set their own cookies when you interact with them, governed by their own policies. You can block or delete cookies in your browser settings, though parts of the site may then not work as intended. If we add analytics or advertising tracking in future, we will update this notice before doing so.</p>
+        </section>
+
+        <section class="sec" id="retention">
+          <p class="sec-num">07</p>
+          <h2>How long do we keep your information?</h2>
+          <ul>
+            <li><strong>Enquiries that do not proceed</strong> &mdash; generally up to 24 months from your last contact, so we can pick the conversation up if you return</li>
+            <li><strong>Client records</strong> &mdash; for the duration of your programme, then as long as our tax, accounting and legal obligations require</li>
+            <li><strong>Application documents</strong> &mdash; transcripts, CVs, personal statements and letters are retained while your application cycle is live, then removed from active systems unless we are required to keep them</li>
+            <li><strong>Reapplication support</strong> &mdash; where you continue with us through a further Match cycle, your records are kept for that cycle too</li>
+          </ul>
+          <p>When information is no longer needed we take reasonable steps to destroy it or permanently de-identify it. You can ask us to delete it sooner &mdash; see below.</p>
+        </section>
+
+        <section class="sec" id="security">
+          <p class="sec-num">08</p>
+          <h2>How do we keep your information safe?</h2>
+          <p>We take reasonable steps to protect personal information from misuse, loss, and unauthorised access, modification or disclosure &mdash; serving this site over HTTPS, restricting access to client records to staff who need it, and choosing reputable service providers.</p>
+          <p>No method of transmission or storage is completely secure and we cannot guarantee absolute security. If a breach occurs that is likely to cause you serious harm, we will notify you and the relevant authority as the law requires.</p>
+        </section>
+
+        <section class="sec" id="rights">
+          <p class="sec-num">09</p>
+          <h2>What are your privacy rights?</h2>
+          <p>You can, at any time:</p>
+          <ul>
+            <li><strong>Ask what we hold</strong> about you</li>
+            <li><strong>Correct it</strong> if anything is inaccurate, out of date or incomplete</li>
+            <li><strong>Ask us to delete it</strong>, where we are not required to keep it</li>
+            <li><strong>Opt out of marketing</strong> &mdash; use the unsubscribe link, reply STOP, or email us</li>
+            <li><strong>Withdraw consent</strong>, understanding we may then be unable to continue advising you or progressing an application</li>
+          </ul>
+          <p>Email <a href="mailto:info@goocampus.in">info@goocampus.in</a> to make any of these requests. We will respond within a reasonable period, ordinarily within 30 days, and we do not charge for a request. If we refuse access or correction, we will tell you why in writing.</p>
+        </section>
+
+        <section class="sec" id="practices">
+          <p class="sec-num">10</p>
+          <h2>Our consulting practices</h2>
+          <p>We do not engage in direct management seat admissions. Our function is consulting: we provide advice, support, information, documentation assistance, training and study programmes to help you pursue your own application.</p>
+          <p>We do not guarantee an exam score, ECFMG certification, a clinical rotation, an interview, a Match result, a residency position, or a visa. Those decisions rest with the relevant body, programme or government.</p>
+        </section>
+
+        <section class="sec" id="payments">
+          <p class="sec-num">11</p>
+          <h2>Unauthorised payment requests</h2>
+          <div class="callout">
+            <p>If anyone requests cash payments, or payments to any account or location other than those confirmed in writing by our head office, <strong>do not pay</strong> &mdash; contact us immediately using the details below. GooCampus Edu Solutions Pvt Ltd accepts no responsibility for payments made to individuals or entities impersonating our team.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="grievance">
+          <p class="sec-num">12</p>
+          <h2>Contact and grievance redressal</h2>
+          <p>For any concern, complaint or question about this notice, your information, or an unauthorised payment request, contact our head office:</p>
+          <div class="callout">
+            <p><strong>GooCampus Edu Solutions Pvt Ltd</strong><br>
+            138/6, Ground Floor, 10th Main Road,<br>
+            Sadashiv Nagar, 6th A Cross Rd, behind SBI Bank,<br>
+            Raj Mahal Vilas Extension, Bengaluru,<br>
+            Karnataka 560080, India</p>
+            <p><strong>Phone:</strong> 080-41743956</p>
+            <p><strong>Privacy enquiries:</strong> <a href="mailto:info@goocampus.in">info@goocampus.in</a></p>
+          </div>
+        </section>
+
+        <section class="sec" id="changes">
+          <p class="sec-num">13</p>
+          <h2>Changes to this notice</h2>
+          <p>We may update this notice as our services or legal obligations change. The current version always sits at this address and the &ldquo;last updated&rdquo; date above tells you when it last changed. Where a change materially affects how we handle information you have already given us, we will take reasonable steps to tell you.</p>
+        </section>
+
+      </div>
+
+      <aside class="order-1 lg:order-2">
+        <div class="lg:sticky lg:top-[150px]">
+          <p class="text-[13px] font-semibold uppercase tracking-[.08em] text-ink">Contents</p>
+          <nav class="toc mt-4 rule pt-2">
+            <a href="#intro">01 &nbsp;Introduction</a>
+            <a href="#collect">02 &nbsp;What we collect</a>
+            <a href="#use">03 &nbsp;How we use it</a>
+            <a href="#share">04 &nbsp;Sharing</a>
+            <a href="#overseas">05 &nbsp;Where it is held</a>
+            <a href="#cookies">06 &nbsp;Cookies</a>
+            <a href="#retention">07 &nbsp;Retention</a>
+            <a href="#security">08 &nbsp;Security</a>
+            <a href="#rights">09 &nbsp;Your rights</a>
+            <a href="#practices">10 &nbsp;Our practices</a>
+            <a href="#payments">11 &nbsp;Payment warning</a>
+            <a href="#grievance">12 &nbsp;Contact</a>
+            <a href="#changes">13 &nbsp;Changes</a>
+          </nav>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer — same as the landing page -->
+<footer class="border-t border-line bg-white py-12 lg:py-16">
+  <div class="container">
+    <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1.2fr]">
+      <div>
+        <img src="assets/logo.png" alt="GooCampus USA" width="1134" height="1134" class="h-20 w-auto" />
+        <p class="copy mt-5 max-w-[42ch]">Guiding International Medical Graduates through the USMLE and Match, from the first eligibility check to your first residency post.</p>
+      </div>
+
+      <div>
+        <h3 class="text-[13px] font-semibold uppercase tracking-[.08em] text-ink">Explore</h3>
+        <ul class="mt-5 space-y-3">
+          <li><a href="index.html" class="text-[15px] text-body transition hover:text-accent">Home</a></li>
+          <li><a href="index.html#program" class="text-[15px] text-body transition hover:text-accent">Standard Consulting Program</a></li>
+          <li><a href="index.html#included" class="text-[15px] text-body transition hover:text-accent">What&rsquo;s Included</a></li>
+          <li><a href="index.html#contact" class="text-[15px] text-body transition hover:text-accent">Contact</a></li>
+          <li><a href="privacy.html" aria-current="page" class="text-[15px] text-body transition hover:text-accent">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-[13px] font-semibold uppercase tracking-[.08em] text-ink">Contact Us</h3>
+        <ul class="mt-5 space-y-3">
+          <li class="text-[15px] leading-[25px] text-body"><span class="font-semibold text-ink">India Office:</span><br />138/6, Ground Floor, 10th Main Road, Sadashiv Nagar, 6th A Cross Rd, behind SBI Bank, Raj Mahal Vilas Extension, Bengaluru, Karnataka 560080</li>
+          <li><a href="tel:+918041743956" class="text-[15px] text-body transition hover:text-accent">080-41743956</a></li>
+          <li><a href="mailto:info@goocampus.in" class="text-[15px] text-body transition hover:text-accent">info@goocampus.in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule mt-14 flex flex-col gap-2 pt-8 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-[14px] text-body">&copy; 2026 GooCampus USA. All rights reserved.</p>
+      <p class="text-[14px] text-body">Standard Consulting Program for IMGs.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const t = document.getElementById('navToggle'), m = document.getElementById('mobileMenu');
+  t && t.addEventListener('click', () => {
+    const open = m.classList.toggle('hidden') === false;
+    t.setAttribute('aria-expanded', String(open));
+  });
+</script>
+
+</body>
+</html>

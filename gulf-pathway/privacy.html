@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy | GooCampus Gulf</title>
+<meta name="description" content="What information GooCampus collects through our GCC licensing services, how we use it, and the rights you have in relation to it." />
+<meta name="robots" content="index,follow" />
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Tokens, banner, nav, buttons and footer are lifted verbatim from index.html
+   so this page is part of the site rather than a separate landing page: same
+   sticky nav, same announcement bar, same footer, same type and colour. Only
+   the legal-prose rules below are specific to this page. */
+:root{
+  --ink:#08170E;
+  --green:#00732F;
+  --green-mid:#005C2B;
+  --green-deep:#00381A;
+  --green-lite:#41B872;
+  --red:#CE1126;
+  --red-deep:#A50E1E;
+  --body:#3D5147;
+  --muted:#566A5E;
+  --paper:#F5F3EE;
+  --sand:#EAE6DC;
+  --white:#FFFFFF;
+  --line:#D6D1C4;
+
+  --display:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --shell:1280px;
+  --pad:clamp(64px,7.5vw,116px);
+  --r:10px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.shell{max-width:var(--shell);margin:0 auto;padding-inline:clamp(20px,4vw,40px)}
+.small{font-size:.9375rem;line-height:1.6}
+
+/* --- buttons ----------------------------------------------------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:52px;padding:.9rem 1.6rem;border-radius:999px;border:1px solid transparent;
+  font-family:var(--sans);font-size:.9375rem;font-weight:600;line-height:1.2;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-mid)}
+.btn-sm{min-height:44px;padding:.6rem 1.15rem;font-size:.875rem}
+
+/* --- top utility banner ------------------------------------------------ */
+.banner{background:var(--green-deep);color:#fff}
+.banner .shell{
+  display:flex;align-items:center;justify-content:center;gap:14px 26px;
+  flex-wrap:wrap;padding-block:12px;text-align:center;
+}
+.banner p{font-size:.875rem;color:rgba(255,255,255,.88);max-width:72ch}
+
+/* --- nav --------------------------------------------------------------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,243,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .shell{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;min-height:44px}
+.brand img{height:68px;width:auto}
+@media (min-width:1024px){.brand img{height:76px}}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{
+  display:inline-flex;align-items:center;min-height:44px;padding:0 .85rem;
+  font-size:.9375rem;font-weight:500;color:var(--body);border-radius:8px;
+}
+.nav-links a:hover{color:var(--ink);background:var(--sand)}
+.nav-links a[aria-current="page"]{color:var(--ink);background:var(--sand)}
+@media (max-width:860px){.nav-links{display:none}}
+
+/* --- page title band --------------------------------------------------- */
+.title{background:var(--white);border-bottom:1px solid var(--line);padding-block:clamp(44px,5.5vw,76px)}
+.eyebrow{display:flex;align-items:center;gap:.6rem;font-size:.8125rem;font-weight:600;
+         letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+h1{font-family:var(--display);font-size:clamp(2.25rem,5vw,3.5rem);line-height:1.05;
+   letter-spacing:-.035em;font-weight:700;margin-top:1rem}
+.lede{font-size:1.125rem;line-height:1.6;color:var(--body);max-width:60ch;margin-top:1.25rem}
+.stamp{margin-top:1.9rem;font-size:.9375rem;color:var(--muted)}
+.stamp strong{color:var(--ink);font-weight:600}
+
+/* --- legal prose ------------------------------------------------------- */
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:clamp(40px,6vw,80px);
+      padding-block:clamp(44px,5.5vw,76px)}
+@media (max-width:900px){.wrap{grid-template-columns:1fr}.toc{order:-1}}
+
+.sec{scroll-margin-top:120px}
+.sec + .sec{margin-top:2.75rem;padding-top:2.75rem;border-top:1px solid var(--line)}
+.prose p.sec-num{font-family:var(--display);font-size:.8125rem;font-weight:700;letter-spacing:.12em;
+         color:var(--green);font-variant-numeric:tabular-nums lining-nums}
+h2{font-family:var(--display);font-size:clamp(1.3rem,2.2vw,1.6rem);line-height:1.25;
+   letter-spacing:-.02em;font-weight:700;margin-top:.5rem}
+h3{font-family:var(--display);font-size:1.0625rem;font-weight:600;margin-top:1.75rem}
+.prose p{font-size:1rem;line-height:1.7;color:var(--body);margin-top:1rem;max-width:72ch}
+.prose ul{margin-top:1rem;max-width:72ch;list-style:none}
+.prose li{position:relative;padding-left:1.6rem;font-size:1rem;line-height:1.65;color:var(--body)}
+.prose li + li{margin-top:.6rem}
+.prose li::before{content:"";position:absolute;left:.1rem;top:.62em;width:8px;height:8px;
+                  border-radius:2px;background:var(--green)}
+.prose strong{color:var(--ink);font-weight:600}
+.prose a{color:var(--green-mid);text-decoration:underline;text-underline-offset:3px}
+.prose a:hover{color:var(--green)}
+
+.callout{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--green);
+         border-radius:var(--r);padding:1.4rem 1.5rem;margin-top:1.25rem}
+.callout p:first-child{margin-top:0}
+
+/* --- contents rail ----------------------------------------------------- */
+.toc{align-self:start;position:sticky;top:120px}
+.toc .lbl{font-family:var(--display);font-size:.8125rem;font-weight:700;letter-spacing:.12em;
+          text-transform:uppercase;color:var(--ink)}
+.toc nav{margin-top:.9rem;border-top:1px solid var(--line);padding-top:.4rem}
+.toc a{display:block;font-size:.875rem;line-height:1.35;color:var(--muted);padding:.45rem 0;
+       font-variant-numeric:tabular-nums}
+.toc a:hover{color:var(--ink)}
+@media (max-width:900px){.toc{position:static}}
+
+/* --- footer ------------------------------------------------------------ */
+.foot{background:var(--ink);color:rgba(255,255,255,.72);padding-block:clamp(48px,6vw,76px) 28px}
+.foot h4{color:#fff;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);margin-bottom:1rem}
+.foot a{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem}
+.foot a:hover{color:#fff;text-decoration:underline}
+.foot ul{list-style:none}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
+@media (max-width:900px){.foot-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+.foot-brand img{height:68px;width:auto;filter:brightness(0) invert(1)}
+.foot-bottom{margin-top:clamp(36px,4vw,56px);padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.8125rem;color:rgba(255,255,255,.58)}
+</style>
+</head>
+<body>
+
+<!-- Same announcement bar as the landing page -->
+<div class="banner">
+  <div class="shell">
+    <p>Book a free GCC consultation — see our full list of services and how the program is structured before you talk to us.</p>
+    <a class="btn btn-light btn-sm" style="background:#fff;color:var(--ink)" href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer">Schedule a Free Consultation</a>
+  </div>
+</div>
+
+<!-- Same sticky nav as the landing page -->
+<header class="nav">
+  <div class="shell">
+    <a class="brand" href="index.html" aria-label="GooCampus — home">
+      <img src="assets/logo.png" alt="GooCampus" width="1080" height="1080" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#program">GCC Licensing Program</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer">Schedule a Free Consultation</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="title">
+    <div class="shell">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">What information we collect, how we use it and what rights you have in relation to it.</p>
+      <p class="stamp"><strong>Last updated on</strong> 2 October 2026</p>
+    </div>
+  </section>
+
+  <div class="shell">
+    <div class="wrap">
+
+      <div class="prose">
+
+        <section class="sec" id="intro">
+          <p class="sec-num">01</p>
+          <h2>Introduction</h2>
+          <p>Thank you for choosing to be part of our community at <strong>GooCampus Edu Solutions Private Limited</strong>, doing business as GooCampus (&ldquo;GooCampus&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). We are committed to protecting your personal information and your right to privacy.</p>
+          <p>This notice covers the information we collect through this website and through the GCC licensing services described on it &mdash; our support for doctors pursuing registration with authorities such as <strong>DHA, DOH, MOH, SCFHS, QCHP</strong> and <strong>NHRA</strong>, and the Prometric examinations that go with them.</p>
+          <p>We are an education and career consulting firm. We are not a licensing authority, a government body, a recruitment agency, or a visa agent, and we are not affiliated with any GCC health authority. If you have questions about this notice or our practices, contact us at <a href="mailto:info@goocampus.in">info@goocampus.in</a>.</p>
+        </section>
+
+        <section class="sec" id="collect">
+          <p class="sec-num">02</p>
+          <h2>What information do we collect?</h2>
+
+          <h3>Personal information you disclose to us</h3>
+          <p>We collect personal information that you voluntarily provide when you book a consultation, enquire about the programme, message us, or enrol. Depending on how you interact with us, this may include:</p>
+          <ul>
+            <li>Name, phone number and email address</li>
+            <li>Country of residence and preferred contact method</li>
+            <li>Your medical qualification, university, year of graduation and current registration status</li>
+            <li>Which GCC authority and licensing track you are pursuing</li>
+            <li>Documents you share with us for DataFlow, attestation or application support</li>
+            <li>The content of any message you send us</li>
+          </ul>
+          <p>Some of this &mdash; your qualifications, professional registration and the documents behind them &mdash; is sensitive. We collect it only with your consent, only where it is reasonably necessary to advise you or act on your behalf, and we do not use it for any other purpose.</p>
+
+          <h3>Information collected automatically</h3>
+          <p>When you visit this website, our hosting provider records standard technical information such as your IP address, browser type and version, device type, operating system, referring page, and the date and time of your visit. This keeps the site secure and working, and does not by itself identify you.</p>
+
+          <h3>Payment information</h3>
+          <div class="callout">
+            <p><strong>We do not collect or process any payment on this website.</strong> There is no checkout, no card form and no payment processor running on these pages. If you enrol in a paid programme, payment is arranged separately and handled by our finance team or a third-party payment provider, who will tell you at that time how your payment data is handled. <strong>We never ask for card details by email or over WhatsApp.</strong></p>
+          </div>
+        </section>
+
+        <section class="sec" id="use">
+          <p class="sec-num">03</p>
+          <h2>How do we use your information?</h2>
+          <p>We use personal information only for the purpose you gave it to us for, and for directly related purposes you would reasonably expect:</p>
+          <ul>
+            <li>To respond to your enquiry and schedule your consultation</li>
+            <li>To assess which licensing authority and track suits your profile, and advise you accordingly</li>
+            <li>To support your DataFlow submission, exam booking and licensing application where you have asked us to</li>
+            <li>To deliver training, materials and mentorship if you enrol</li>
+            <li>To send service messages about a programme you are enrolled in</li>
+            <li>To send information about our programmes where you asked for it, or would reasonably expect it &mdash; you can opt out at any time</li>
+            <li>To improve and secure our website and services</li>
+            <li>To meet our legal, accounting and record-keeping obligations</li>
+          </ul>
+          <p>We do not sell your personal information, and we do not use it to make automated decisions that produce a legal or similarly significant effect on you.</p>
+        </section>
+
+        <section class="sec" id="share">
+          <p class="sec-num">04</p>
+          <h2>Will your information be shared?</h2>
+          <p>We disclose personal information only where it is necessary to deliver what you have asked for, and only to parties bound to protect it:</p>
+          <ul>
+            <li><strong>Licensing authorities and verification bodies</strong> &mdash; where you have asked us to support an application, the relevant GCC authority and primary-source verification provider (for example DataFlow) receive the documents needed for it</li>
+            <li><strong>Examination providers</strong> &mdash; where we assist with Prometric booking</li>
+            <li><strong>Form and scheduling providers</strong> that receive your enquiry on our behalf</li>
+            <li><strong>Messaging platforms</strong> &mdash; if you contact us on WhatsApp, your message and number are handled by WhatsApp (Meta) under its own terms as well as ours</li>
+            <li><strong>Email, storage and workflow providers</strong> we use to run the business and hold client records</li>
+            <li><strong>Professional advisers</strong> &mdash; accountants, auditors and lawyers &mdash; where required</li>
+            <li><strong>Government or regulatory bodies</strong> where the law requires disclosure</li>
+          </ul>
+          <p>We do not share your information with hospitals, recruiters or any third party for their own marketing purposes.</p>
+        </section>
+
+        <section class="sec" id="overseas">
+          <p class="sec-num">05</p>
+          <h2>Where your information is held</h2>
+          <p>GooCampus is based in <strong>India</strong>, and our team accesses and stores client information there. Some service providers we use store data in the <strong>United States</strong> or elsewhere. Where you ask us to support a licensing application, your documents are transmitted to the relevant authority or verification body in the <strong>GCC country concerned</strong>.</p>
+          <p>This means your personal information will be held and processed outside your country of residence. By submitting it, you consent to that transfer. Recipients may be subject to laws that differ from those where you live. We take reasonable steps to ensure the providers we use have appropriate security and confidentiality protections in place.</p>
+          <p>As an Indian company we are subject to India&rsquo;s <strong>Digital Personal Data Protection Act, 2023</strong>. Where you are located elsewhere and local law gives you stronger protection, we apply the standard more protective of you.</p>
+        </section>
+
+        <section class="sec" id="cookies">
+          <p class="sec-num">06</p>
+          <h2>Cookies</h2>
+          <p>This website uses only what is necessary to serve the pages and load fonts. We do not currently run advertising pixels or third-party analytics on these pages.</p>
+          <p>Third-party services embedded in or linked from the site may set their own cookies when you interact with them, governed by their own policies. You can block or delete cookies in your browser settings, though parts of the site may then not work as intended. If we add analytics or advertising tracking in future, we will update this notice before doing so.</p>
+        </section>
+
+        <section class="sec" id="retention">
+          <p class="sec-num">07</p>
+          <h2>How long do we keep your information?</h2>
+          <ul>
+            <li><strong>Enquiries that do not proceed</strong> &mdash; generally up to 24 months from your last contact, so we can pick the conversation up if you return</li>
+            <li><strong>Client records</strong> &mdash; for the duration of your programme, then as long as our tax, accounting and legal obligations require</li>
+            <li><strong>Documents submitted for licensing</strong> &mdash; retained while your application is live, then removed from active systems unless we are required to keep them</li>
+          </ul>
+          <p>When information is no longer needed we take reasonable steps to destroy it or permanently de-identify it. You can ask us to delete it sooner &mdash; see below.</p>
+        </section>
+
+        <section class="sec" id="security">
+          <p class="sec-num">08</p>
+          <h2>How do we keep your information safe?</h2>
+          <p>We take reasonable steps to protect personal information from misuse, loss, and unauthorised access, modification or disclosure &mdash; serving this site over HTTPS, restricting access to client records to staff who need it, and choosing reputable service providers.</p>
+          <p>No method of transmission or storage is completely secure and we cannot guarantee absolute security. If a breach occurs that is likely to cause you serious harm, we will notify you and the relevant authority as the law requires.</p>
+        </section>
+
+        <section class="sec" id="rights">
+          <p class="sec-num">09</p>
+          <h2>What are your privacy rights?</h2>
+          <p>You can, at any time:</p>
+          <ul>
+            <li><strong>Ask what we hold</strong> about you</li>
+            <li><strong>Correct it</strong> if anything is inaccurate, out of date or incomplete</li>
+            <li><strong>Ask us to delete it</strong>, where we are not required to keep it</li>
+            <li><strong>Opt out of marketing</strong> &mdash; use the unsubscribe link, reply STOP, or email us</li>
+            <li><strong>Withdraw consent</strong>, understanding we may then be unable to continue advising you or progressing an application</li>
+          </ul>
+          <p>Email <a href="mailto:info@goocampus.in">info@goocampus.in</a> to make any of these requests. We will respond within a reasonable period, ordinarily within 30 days, and we do not charge for a request. If we refuse access or correction, we will tell you why in writing.</p>
+        </section>
+
+        <section class="sec" id="practices">
+          <p class="sec-num">10</p>
+          <h2>Our admission and licensing practices</h2>
+          <p>We do not engage in direct management seat admissions. Our function is consulting: we provide advice, support, information, documentation assistance, training and study programmes to help you pursue your own application.</p>
+          <p>We do not guarantee an exam result, a licence, a registration outcome, a job offer, or a visa. Those decisions rest with the relevant authority, employer or government.</p>
+        </section>
+
+        <section class="sec" id="payments">
+          <p class="sec-num">11</p>
+          <h2>Unauthorised payment requests</h2>
+          <div class="callout">
+            <p>If anyone requests cash payments, or payments to any account or location other than those confirmed in writing by our head office, <strong>do not pay</strong> &mdash; contact us immediately using the details below. GooCampus Edu Solutions Pvt Ltd accepts no responsibility for payments made to individuals or entities impersonating our team.</p>
+          </div>
+        </section>
+
+        <section class="sec" id="grievance">
+          <p class="sec-num">12</p>
+          <h2>Contact and grievance redressal</h2>
+          <p>For any concern, complaint or question about this notice, your information, or an unauthorised payment request, contact our head office:</p>
+          <div class="callout">
+            <p><strong>GooCampus Edu Solutions Pvt Ltd</strong><br>
+            138/6, Ground Floor, 10th Main Road,<br>
+            Sadashiv Nagar, 6th A Cross Rd, behind SBI Bank,<br>
+            Raj Mahal Vilas Extension, Bengaluru,<br>
+            Karnataka 560080, India</p>
+            <p><strong>Phone:</strong> 080-41743956</p>
+            <p><strong>Privacy enquiries:</strong> <a href="mailto:info@goocampus.in">info@goocampus.in</a></p>
+          </div>
+        </section>
+
+        <section class="sec" id="changes">
+          <p class="sec-num">13</p>
+          <h2>Changes to this notice</h2>
+          <p>We may update this notice as our services or legal obligations change. The current version always sits at this address and the &ldquo;last updated&rdquo; date above tells you when it last changed. Where a change materially affects how we handle information you have already given us, we will take reasonable steps to tell you.</p>
+        </section>
+
+      </div>
+
+      <aside class="toc">
+        <p class="lbl">Contents</p>
+        <nav>
+          <a href="#intro">01 &nbsp;Introduction</a>
+          <a href="#collect">02 &nbsp;What we collect</a>
+          <a href="#use">03 &nbsp;How we use it</a>
+          <a href="#share">04 &nbsp;Sharing</a>
+          <a href="#overseas">05 &nbsp;Where it is held</a>
+          <a href="#cookies">06 &nbsp;Cookies</a>
+          <a href="#retention">07 &nbsp;Retention</a>
+          <a href="#security">08 &nbsp;Security</a>
+          <a href="#rights">09 &nbsp;Your rights</a>
+          <a href="#practices">10 &nbsp;Our practices</a>
+          <a href="#payments">11 &nbsp;Payment warning</a>
+          <a href="#grievance">12 &nbsp;Contact</a>
+          <a href="#changes">13 &nbsp;Changes</a>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- Same footer as the landing page -->
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="GooCampus" width="1080" height="1080" />
+        <p class="small" style="margin-top:1rem;max-width:34ch">Physician-led guidance for doctors building a medical career across the Gulf.</p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#program">GCC Licensing Program</a></li>
+          <li><a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer">Schedule a Free Consultation</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <p class="small"><strong style="color:#fff;font-weight:600">Head Office</strong><br />United Arab Emirates</p>
+        <p class="small" style="margin-top:1rem"><strong style="color:#fff;font-weight:600">India Office</strong><br />138/6, Ground Floor, 10th Main Road, Sadashiv Nagar, 6th A Cross Rd, behind SBI Bank, Raj Mahal Vilas Extension, Bengaluru, Karnataka 560080</p>
+      </div>
+
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+918041743956">080-41743956</a></li>
+          <li><a href="mailto:info@goocampus.in">info@goocampus.in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="foot-bottom">&copy; 2026 GooCampus. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
