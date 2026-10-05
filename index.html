@@ -1,474 +1,315 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GooCampus — Guiding MBBS Graduates Towards a Global Medical PG Career</title>
-<meta name="description" content="A medical PG consulting and training firm based in Bengaluru, helping doctors build their careers across India, Australia, USA, the Gulf and beyond." />
-<meta name="robots" content="index,follow" />
+<meta name="description" content="A medical PG consulting and training firm based in Bengaluru, helping doctors build their careers across India, Australia, USA, the Gulf and beyond.">
+<link rel="canonical" href="https://goocampusglobal.com/">
 
-<link rel="icon" type="image/png" href="assets/favicon.png" media="(prefers-color-scheme: light)" />
-<link rel="icon" type="image/png" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)" />
-<link rel="apple-touch-icon" href="assets/favicon.png" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://goocampusglobal.com/">
+<meta property="og:title" content="GooCampus — Guiding MBBS Graduates Towards a Global Medical PG Career">
+<meta property="og:description" content="A medical PG consulting and training firm based in Bengaluru, helping doctors build their careers across India, Australia, USA, the Gulf and beyond.">
+<meta property="og:image" content="https://goocampusglobal.com/assets/program-india.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-/* ===========================================================================
-   Design follows the supplied reference: warm cream page, white cards, a coral
-   accent, heavy tight display type, full-pill buttons and a centred eyebrow →
-   headline → subcopy rhythm before every grid.
-
-   Two deliberate departures, both for legibility:
-   · The reference puts white text on its coral (#FE6037). That measures about
-     3:1, which fails AA for button-sized text, so anything carrying white text
-     uses --flame-deep instead and the bright coral stays decorative.
-   · The reference sets Open Sauce, which is not on Google Fonts. Plus Jakarta
-     Sans is the closest widely-available match — same geometric warmth and it
-     takes the same tight tracking.
-   =========================================================================== */
-:root{
-  --cream:#FCF3EE;        /* page */
-  --cream-soft:#FDF9F6;   /* alternating band */
-  --white:#FFFFFF;        /* cards */
-  --ink:#0A0A0A;
-  --muted:#6A6A6A;      /* darkened from the reference #757575: that measures 4.21:1 on this cream, under AA */
-  --line:rgba(10,10,10,.09);
-
-  --flame:#FE6037;        /* decorative only — fails AA behind white text */
-  --flame-deep:#C2410C;   /* carries white text */
-  --flame-soft:#FFEDE6;
-
-  /* Sampled straight out of assets/logo.png: the mark is 240,112,32 orange over
-     32,64,128 blue. The blue is dark enough to carry headline text as-is. The
-     orange at full strength measures only ~2.7:1 on the cream — under the 3:1
-     large-text floor — so headline orange is a touch deeper while staying in
-     the same family as the mark. */
-  --brand-blue:#204080;
-  --brand-orange:#F07020;      /* the logo's own orange — icons, rules, fills */
-  --brand-orange-text:#D2590F; /* same family, dark enough to set type on cream */
-
-  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-
-  --shell:1200px;
-  --pad:clamp(72px,8vw,132px);
-  --r:16px;
-}
-
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);
-     -webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-.shell{max-width:var(--shell);margin:0 auto;padding-inline:clamp(20px,4vw,32px)}
-.sec{padding-block:var(--pad)}
-.band{background:var(--cream-soft)}
-
-/* --- type ---------------------------------------------------------------- */
-h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.08;letter-spacing:-.05em;font-weight:800;color:var(--brand-blue)}
-h2{font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.1;letter-spacing:-.045em;font-weight:800}
-h3{font-size:1.375rem;line-height:1.25;letter-spacing:-.025em;font-weight:700}
-.dim{color:var(--brand-orange-text)}
-.lede{font-size:1.0625rem;line-height:1.65;color:var(--muted);max-width:52ch}
-
-/* eyebrow: coral dot + caps label, centred above every section head */
-.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78125rem;font-weight:700;
-         letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand-orange)}
-.head{text-align:center;max-width:46rem;margin:0 auto clamp(40px,5vw,64px)}
-.head h2{margin-top:1rem}
-.head .lede{margin:1.1rem auto 0;text-align:center}
-
-/* --- buttons: full pills ------------------------------------------------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-     min-height:52px;padding:.85rem 1.6rem;border-radius:999px;border:1px solid transparent;
-     font-size:.9375rem;font-weight:700;line-height:1;
-     transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s cubic-bezier(.16,1,.3,1)}
-.btn:active{transform:translateY(1px)}
-.btn-flame{background:var(--flame-deep);color:#fff}
-.btn-flame:hover{background:#9A3412}
-.btn-ink{background:var(--ink);color:#fff}
-.btn-ink:hover{background:#262626}
-.btn-light{background:var(--white);color:var(--ink);border-color:var(--line)}
-.btn-light:hover{border-color:rgba(10,10,10,.3)}
-.btn-sm{min-height:44px;padding:.6rem 1.2rem;font-size:.875rem}
-
-/* --- nav ----------------------------------------------------------------- */
-.nav{position:sticky;top:0;z-index:60;background:rgba(252,243,238,.88);backdrop-filter:blur(12px);
-     border-bottom:1px solid var(--line)}
-.nav .shell{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
-.brand img{height:54px;width:auto}
-@media (min-width:1024px){.brand img{height:62px}}
-.nav-links{display:flex;align-items:center;gap:.25rem}
-.nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;
-             font-size:.9375rem;font-weight:600;color:var(--muted);border-radius:999px}
-.nav-links a:hover{color:var(--ink);background:var(--white)}
-@media (max-width:920px){.nav-links{display:none}}
-
-/* --- hero ---------------------------------------------------------------- */
-.hero{padding-block:clamp(56px,7vw,104px) clamp(48px,6vw,80px);text-align:center}
-.pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--white);border:1px solid var(--line);
-      border-radius:999px;padding:.4rem .9rem .4rem .4rem;font-size:.8125rem;font-weight:600;color:var(--muted)}
-.pill b{background:var(--flame);color:#fff;border-radius:999px;padding:.25rem .6rem;font-size:.75rem;font-weight:700}
-.hero h1{margin-top:1.5rem;max-width:18ch;margin-inline:auto}
-.hero .lede{margin:1.5rem auto 0;text-align:center;font-size:1.125rem;max-width:56ch}
-.hero-cta{margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.rating{margin-top:2rem;display:inline-flex;align-items:center;gap:.6rem;font-size:.875rem;color:var(--muted)}
-.stars{color:var(--flame);letter-spacing:.08em}
-
-/* --- stats --------------------------------------------------------------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media (max-width:980px){.stats{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.stats{grid-template-columns:1fr}}
-.stat{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.75rem 1.5rem}
-.stat dt{font-size:clamp(2rem,3.2vw,2.75rem);font-weight:800;letter-spacing:-.045em;line-height:1;
-         color:var(--flame-deep);font-variant-numeric:tabular-nums lining-nums}
-.stat dd{margin-top:.65rem;font-size:.9375rem;line-height:1.5;color:var(--muted);font-weight:500}
-
-/* --- programme cards ----------------------------------------------------- */
-.programs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-@media (max-width:900px){.programs{grid-template-columns:1fr}}
-.prog{background:var(--white);border:1px solid var(--line);border-radius:var(--r);
-      display:flex;flex-direction:column;overflow:hidden}
-.prog.wide{grid-column:1 / -1}
-/* Country banner across the top. Fixed 16:9 on the half-width cards and a
-   shallower strip on the full-width one, so the row heights stay even. */
-.prog-img{position:relative;background:var(--cream);aspect-ratio:16/9}
-.prog.wide .prog-img{aspect-ratio:24/9}
-.prog-img img{width:100%;height:100%;object-fit:cover;display:block}
-.prog-img::after{content:"";position:absolute;inset:0;pointer-events:none;
-                 box-shadow:inset 0 -1px 0 var(--line)}
-.prog-body{padding:1.85rem;display:flex;flex-direction:column;flex:1}
-.prog .eyebrow{font-size:.75rem}
-.prog h3{margin-top:.9rem}
-.prog p{margin-top:.85rem;font-size:.9375rem;line-height:1.65;color:var(--muted)}
-.enrolled{margin-top:1.1rem;display:inline-flex;align-items:center;gap:.5rem;align-self:flex-start;
-          background:var(--flame-soft);color:var(--flame-deep);border-radius:999px;
-          padding:.45rem .9rem;font-size:.8125rem;font-weight:700}
-.tags{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:8px}
-.tag{display:inline-flex;align-items:center;background:var(--cream);border:1px solid var(--line);
-     border-radius:999px;padding:.45rem .85rem;font-size:.8125rem;font-weight:600;color:var(--ink)}
-.prog .go{margin-top:1.6rem;align-self:flex-start}
-
-/* --- why list ------------------------------------------------------------ */
-.why{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media (max-width:820px){.why{grid-template-columns:1fr}}
-.why li{list-style:none;background:var(--white);border:1px solid var(--line);border-radius:var(--r);
-        padding:1.35rem 1.5rem 1.35rem 3.3rem;position:relative;font-size:.9375rem;line-height:1.6;
-        font-weight:500}
-.why li::before{content:"";position:absolute;left:1.5rem;top:1.72rem;width:10px;height:10px;
-                border-radius:3px;background:var(--flame)}
-
-/* --- final CTA ----------------------------------------------------------- */
-.final{background:var(--ink);color:#fff;border-radius:28px;padding:clamp(48px,6vw,80px) clamp(28px,5vw,64px);
-       text-align:center}
-.final h2{color:#fff}
-.final p{margin:1.2rem auto 0;max-width:46ch;color:rgba(255,255,255,.72);font-size:1.0625rem;line-height:1.65}
-.final .hero-cta{margin-top:2rem}
-
-/* --- footer -------------------------------------------------------------- */
-.foot{background:var(--cream-soft);border-top:1px solid var(--line);padding-block:clamp(48px,5vw,72px) 28px}
-.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.4fr;gap:clamp(28px,4vw,56px)}
-@media (max-width:860px){.foot-grid{grid-template-columns:1fr;gap:32px}}
-.foot h4{font-size:.78125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.1rem}
-.foot ul{list-style:none}
-.foot li+li{margin-top:.6rem}
-.foot a,.foot p{font-size:.9375rem;color:var(--muted);line-height:1.6}
-.foot a:hover{color:var(--ink)}
-.foot img{height:54px;width:auto}
-.foot-bottom{margin-top:clamp(36px,4vw,56px);padding-top:22px;border-top:1px solid var(--line);
-             font-size:.8125rem;color:var(--muted)}
-
-/* --- motion: resting state is visible, so a blocked script cannot hide it - */
-.js [data-reveal]{opacity:0;transform:translateY(20px)}
-.js [data-reveal].in{opacity:1;transform:none;
-  transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .js [data-reveal]{opacity:1;transform:none}
-  .btn:active{transform:none}
-}
-</style>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<script>document.documentElement.classList.add('js');document.body&&0;</script>
 
-<a href="#main" class="btn btn-ink btn-sm" style="position:absolute;left:-9999px;top:0"
-   onfocus="this.style.left='16px';this.style.top='16px';this.style.zIndex=99"
-   onblur="this.style.left='-9999px'">Skip to content</a>
-
-<!-- ============ NAV ============ -->
-<header class="nav">
-  <div class="shell">
-    <a class="brand" href="#top" aria-label="GooCampus — home">
-      <img src="assets/logo.png" alt="GooCampus" width="1080" height="1080" />
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner wrap">
+    <a class="nav__logo" href="#top" aria-label="GooCampus home">
+      <img src="/assets/logo.png" alt="GooCampus" width="180" height="145">
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
+    <nav class="nav__links" aria-label="Sections">
       <a href="#programs">Programs</a>
+      <a href="#about">About</a>
       <a href="#why">Why GooCampus</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-flame btn-sm" href="https://goocampus.fillout.com/goocampus-free-consultation"
-       target="_blank" rel="noopener noreferrer">Explore Now</a>
+    <a class="btn btn--solid nav__cta" href="#programs">Explore Each Country</a>
   </div>
 </header>
 
-<main id="main">
-<div id="top"></div>
 
-<!-- ============ HERO ============ -->
+<!-- ============================================================
+     1. HERO
+     ============================================================ -->
+<main id="top">
 <section class="hero">
-  <div class="shell">
-    <span class="pill" data-reveal><b>#001</b> Medical PG Consulting &amp; Training</span>
-    <h1 data-reveal style="transition-delay:.06s">Guiding MBBS Graduates Towards a <span class="dim">Global Medical PG Career</span></h1>
-    <p class="lede" data-reveal style="transition-delay:.12s">A medical PG consulting and training firm based in Bengaluru, helping doctors build their careers across India, Australia, USA, the Gulf and beyond.</p>
-    <div class="hero-cta" data-reveal style="transition-delay:.18s">
-      <a class="btn btn-flame" href="#programs">Explore Each Country</a>
-      <a class="btn btn-light" href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer">Talk to a Counsellor</a>
+  <div class="wrap hero__inner">
+    <div class="hero__copy reveal">
+      <span class="pill">Medical PG Consulting &amp; Training</span>
+      <h1>Guiding MBBS Graduates Towards a Global Medical PG Career</h1>
+      <p class="lead">A medical PG consulting and training firm based in Bengaluru, helping doctors build their careers across India, Australia, USA, the Gulf and beyond.</p>
+      <div class="hero__actions">
+        <a class="btn btn--solid btn--lg" href="#programs">EXPLORE EACH COUNTRY</a>
+      </div>
+      <p class="rating">
+        <span class="rating__stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9z"/></svg>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2.5l2.9 5.9 6.6.9-4.8 4.6 1.2 6.5L12 17.3l-5.9 3.1 1.2-6.5L2.5 9.3l6.6-.9z"/></svg>
+        </span>
+        <em>300+ Google Ratings, 4.9 stars — Trusted by doctors across the world</em>
+      </p>
     </div>
-    <p class="rating" data-reveal style="transition-delay:.24s">
-      <span class="stars" aria-hidden="true">★★★★★</span>
-      <span><strong style="color:var(--ink)">300+</strong> Google ratings, 4.9 stars — trusted by doctors across the world</span>
-    </p>
+
   </div>
+
+  <!-- one bar per country, each jumps to that program below -->
+  <ul class="countries wrap" aria-label="Countries we guide doctors to">
+    <li class="reveal"><a href="#program-india">
+      <img src="/assets/bar-india.jpg" alt="India Gate, New Delhi" width="560" height="760" fetchpriority="high">
+      <span class="countries__name">India</span>
+    </a></li>
+    <li class="reveal"><a href="#program-australia">
+      <img src="/assets/bar-australia.jpg" alt="Sydney Harbour, Australia" width="560" height="760" loading="lazy">
+      <span class="countries__name">Australia</span>
+    </a></li>
+    <li class="reveal"><a href="#program-usa">
+      <img src="/assets/bar-usa.jpg" alt="The Statue of Liberty, New York" width="560" height="760" loading="lazy">
+      <span class="countries__name">USA</span>
+    </a></li>
+    <li class="reveal"><a href="#program-gulf">
+      <img src="/assets/bar-gulf.jpg" alt="High-rise towers in Dubai" width="560" height="760" loading="lazy">
+      <span class="countries__name">The Gulf</span>
+    </a></li>
+  </ul>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="sec band" id="about">
-  <div class="shell">
-    <div class="head" data-reveal>
-      <span class="eyebrow">About GooCampus</span>
-      <h2>Guiding doctors end to end, wherever they are in the process</h2>
-    </div>
-    <p class="lede" data-reveal style="max-width:60ch;margin-inline:auto;text-align:center;font-size:1.0625rem">
-      GooCampus is a medical career consulting and training firm helping doctors plan their path abroad,
-      across India, Australia, USA, the Gulf and beyond. From eligibility checks and choosing the right
-      pathway to licensing, exams, documentation and career readiness, we guide doctors end to end, with
-      the same care and attention whether they are just starting out or already deep into the process.
-    </p>
-  </div>
-</section>
 
-<!-- ============ FACTS AND FIGURES ============ -->
-<section class="sec">
-  <div class="shell">
-    <div class="head" data-reveal>
-      <span class="eyebrow">Facts and Figures</span>
-      <h2>Empowering insights</h2>
-    </div>
-    <dl class="stats">
-      <div class="stat" data-reveal><dt>1000+</dt><dd>Doctors counselled and guided</dd></div>
-      <div class="stat" data-reveal style="transition-delay:.05s"><dt>15+</dt><dd>Years of expertise in medical education guidance</dd></div>
-      <div class="stat" data-reveal style="transition-delay:.1s"><dt>30+</dt><dd>Team members working with you at every stage</dd></div>
-      <div class="stat" data-reveal style="transition-delay:.15s"><dt>1:1</dt><dd>Personalised guidance sessions</dd></div>
-    </dl>
-    <ul class="why" style="margin-top:14px">
-      <li data-reveal>Mentoring sessions from practising doctors abroad</li>
-      <li data-reveal style="transition-delay:.05s">24×7 access to our support team</li>
-      <li data-reveal style="transition-delay:.1s;grid-column:1 / -1">Country-specific counsellors for every pathway</li>
-    </ul>
-  </div>
-</section>
+<!-- ============================================================
+     2. FACTS AND FIGURES
+     ============================================================ -->
+<section class="facts" id="facts">
+  <div class="wrap">
+    <span class="pill pill--onDark">Facts and Figures</span>
+    <h2 class="section-title section-title--onDark">FACTS AND FIGURES: EMPOWERING INSIGHTS</h2>
 
-<!-- ============ PROGRAMS ============ -->
-<section class="sec band" id="programs">
-  <div class="shell">
-    <div class="head" data-reveal>
-      <span class="eyebrow">Our Programs</span>
-      <h2>Explore each country</h2>
-      <p class="lede">Choose the pathway that fits your goals — or let a counsellor help you decide which country is right for you.</p>
-    </div>
-
-    <div class="programs">
-
-      <article class="prog" data-reveal>
-        <div class="prog-img"><img src="assets/card-india.jpg" width="1120" height="630" loading="lazy" decoding="async" alt="India Gate, the war memorial in New Delhi, lit by the morning sun" /></div>
-        <div class="prog-body">
-        <span class="eyebrow">India</span>
-        <h3>NEET PG Counselling and Admission Guidance Program</h3>
-        <p>We support you from round 1 all the way to the stray vacancy round. Whatever rank you get, we work with you based on your goals and choices to help you secure the best possible PG seat through the counselling stages.</p>
-        <span class="enrolled">279+ doctors enrolled</span>
-        <div class="tags">
-          <span class="tag">Round 1 to stray vacancy</span>
-          <span class="tag">College &amp; specialty selection</span>
-          <span class="tag">Work-life balance &amp; bed strength data</span>
-          <span class="tag">Documentation checklist</span>
-          <span class="tag">Management / NRI quota</span>
-          <span class="tag">Reservation quota insights</span>
-        </div>
-        <a class="btn btn-ink btn-sm go" href="https://goocampus.in" target="_blank" rel="noopener noreferrer">Explore the program</a>
-        </div>
-      </article>
-
-      <article class="prog" data-reveal style="transition-delay:.05s">
-        <div class="prog-img"><img src="assets/card-australia.jpg" width="1120" height="630" loading="lazy" decoding="async" alt="The Sydney Opera House and Harbour Bridge seen across the water" /></div>
-        <div class="prog-body">
-        <span class="eyebrow">Australia</span>
-        <h3>Australia Standard Consulting Program</h3>
-        <p>The Australia pathway has many moving parts — AMC exams, registration, English proficiency, visas and the job market — and getting the sequence or timing wrong can set you back months. This program gives you a structured, well-planned approach, with the right support at every stage.</p>
-        <span class="enrolled">376+ doctors enrolled</span>
-        <div class="tags">
-          <span class="tag">Personalised pathway plan</span>
-          <span class="tag">AMC MCQ &amp; clinical training</span>
-          <span class="tag">English language training</span>
-          <span class="tag">Documentation &amp; registration</span>
-          <span class="tag">Hiring windows &amp; job alerts</span>
-          <span class="tag">CV &amp; interview prep</span>
-          <span class="tag">Speak to Australian doctors</span>
-        </div>
-        <a class="btn btn-ink btn-sm go" href="https://goocampusaustralia.com" target="_blank" rel="noopener noreferrer">Explore the program</a>
-        </div>
-      </article>
-
-      <article class="prog" data-reveal style="transition-delay:.1s">
-        <div class="prog-img"><img src="assets/card-usa.jpg" width="1120" height="630" loading="lazy" decoding="async" alt="Close-up of the Statue of Liberty — her face, crown and raised torch against the sky" /></div>
-        <div class="prog-body">
-        <span class="eyebrow">USA</span>
-        <h3>USA Standard Consulting Program</h3>
-        <p>The USA pathway takes time, and one wrong step can delay the whole process. From USMLE exams to LORs and your Match strategy, everything needs to be planned in advance — this journey can't be figured out on the go. Timing matters at every step.</p>
-        <span class="enrolled">98+ doctors enrolled</span>
-        <div class="tags">
-          <span class="tag">USMLE pathway plan</span>
-          <span class="tag">Exam prep guidance</span>
-          <span class="tag">LOR &amp; experience letters</span>
-          <span class="tag">ERAS &amp; Match strategy</span>
-          <span class="tag">Documentation support</span>
-        </div>
-        <a class="btn btn-ink btn-sm go" href="/usa-pathway/" target="_blank" rel="noopener noreferrer">Explore the program</a>
-        </div>
-      </article>
-
-      <article class="prog" data-reveal style="transition-delay:.15s">
-        <div class="prog-img"><img src="assets/card-gulf.jpg" width="1120" height="630" loading="lazy" decoding="async" alt="The Dubai Marina skyline of high-rise towers at sunrise" /></div>
-        <div class="prog-body">
-        <span class="eyebrow">Gulf</span>
-        <h3>GCC Licensing and Career Support Program</h3>
-        <p>Dubai, Abu Dhabi, Saudi Arabia, Qatar and beyond each have their own exams and governing bodies, so one strategy doesn't work everywhere. With limited exam attempts allowed, your first step matters — so you get it right the first time.</p>
-        <span class="enrolled">134+ doctors enrolled</span>
-        <div class="tags">
-          <span class="tag">Prometric exam prep</span>
-          <span class="tag">DataFlow assistance</span>
-          <span class="tag">Documentation support</span>
-          <span class="tag">Job alerts &amp; interview tips</span>
-          <span class="tag">Interview prep &amp; negotiation</span>
-          <span class="tag">Guidance from UAE doctors</span>
-        </div>
-        <a class="btn btn-ink btn-sm go" href="/gulf-pathway/" target="_blank" rel="noopener noreferrer">Explore the program</a>
-        </div>
-      </article>
-
-      <article class="prog wide" data-reveal style="transition-delay:.2s">
-        <div class="prog-img"><img src="assets/card-als.jpg" width="1680" height="630" loading="lazy" decoding="async" alt="Hands performing chest compressions on a CPR training manikin" /></div>
-        <div class="prog-body">
-        <span class="eyebrow">Certification</span>
-        <h3>Advanced Life Support (ALS) Certificate Program</h3>
-        <p>Want to earn CPD points and stand out in your job applications in the UK and Australia? Enrol in our comprehensive 2-day ALS course in India and gain the skills to provide critical life support in emergencies — from India's only ERC-certified ALS provider, recognised in the UK and Australia.</p>
-        <div class="tags">
-          <span class="tag">2-day course in India</span>
-          <span class="tag">ERC-certified provider</span>
-          <span class="tag">CPD points</span>
-          <span class="tag">Recognised in the UK &amp; Australia</span>
-        </div>
-        <a class="btn btn-ink btn-sm go" href="https://alscourse.com" target="_blank" rel="noopener noreferrer">Explore the program</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY GOOCAMPUS ============ -->
-<section class="sec" id="why">
-  <div class="shell">
-    <div class="head" data-reveal>
-      <span class="eyebrow">Why Choose GooCampus</span>
-      <h2>Honest guidance, built around your profile</h2>
-    </div>
-    <ul class="why">
-      <li data-reveal>Right-country guidance based on an eligibility check first</li>
-      <li data-reveal style="transition-delay:.05s">1:1 personalised pathway plan, wherever you are in your career</li>
-      <li data-reveal style="transition-delay:.1s">Country-specific counsellors who know your pathway inside out</li>
-      <li data-reveal style="transition-delay:.15s">Regular progress calls to guide your next steps</li>
-      <li data-reveal style="transition-delay:.2s">Two-way support — reach out with any doubt, anytime</li>
-      <li data-reveal style="transition-delay:.25s">Honest, ground-reality advice, no false promises</li>
-      <li data-reveal style="transition-delay:.3s;grid-column:1 / -1">Clear, accurate timelines and costs, always</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="sec" style="padding-top:0">
-  <div class="shell">
-    <div class="final" data-reveal>
-      <h2>Ready to plan your medical PG career abroad?</h2>
-      <p>Explore our services — and if you're confused about which country to choose, let our counsellors guide you.</p>
-      <div class="hero-cta">
-        <a class="btn btn-flame" href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer">Explore Now</a>
-        <a class="btn btn-light" href="#programs">See all programs</a>
+    <div class="facts__stats">
+      <div class="stat reveal">
+        <span class="stat__num" data-count="1000" data-suffix="+">1000+</span>
+        <span class="stat__label">doctors counselled and guided</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="15" data-suffix="+">15+</span>
+        <span class="stat__label">years of expertise in medical education guidance</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="30" data-suffix="+">30+</span>
+        <span class="stat__label">team members working with you at every stage</span>
       </div>
     </div>
+
+    <ul class="facts__list">
+      <li class="reveal">1:1 personalised guidance sessions</li>
+      <li class="reveal">Mentoring sessions from practising doctors abroad</li>
+      <li class="reveal">24x7 access to our support team</li>
+      <li class="reveal">Country-specific counsellors for every pathway</li>
+    </ul>
   </div>
 </section>
 
+
+<!-- ============================================================
+     3. ABOUT GOOCAMPUS
+     ============================================================ -->
+<section class="about" id="about">
+  <div class="wrap about__inner">
+    <div class="about__head reveal">
+      <span class="pill">About GooCampus</span>
+      <h2 class="section-title">ABOUT GOOCAMPUS</h2>
+    </div>
+    <p class="about__text reveal">GooCampus is a medical career consulting and training firm helping doctors plan their path abroad, across India, Australia, USA, the Gulf and beyond. From eligibility checks and choosing the right pathway to licensing, exams, documentation and career readiness, we guide doctors end to end, with the same care and attention whether they are just starting out or already deep into the process.</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. OUR PROGRAMS
+     ============================================================ -->
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="programs__head reveal">
+      <span class="pill">Our Programs</span>
+      <h2 class="section-title">OUR PROGRAMS</h2>
+    </div>
+
+    <!-- 01 India -->
+    <article class="program reveal" id="program-india">
+      <div class="program__media">
+        <span class="program__num">01</span>
+        <img src="/assets/program-india.jpg" alt="India Gate in New Delhi" width="900" height="620" loading="lazy">
+      </div>
+      <div class="program__body">
+        <h3>India NEET PG Counselling and Admission Guidance Program</h3>
+        <p>We support you from round 1 all the way to the stray vacancy round. Whatever rank you get, we work with you based on your goals and choices to help you secure the best possible PG seat through the counselling stages.</p>
+        <p class="program__proof">279+ doctors enrolled, got the right guidance. It's your turn.</p>
+        <p class="program__getLabel">Here's what you get:</p>
+        <ul class="ticks">
+          <li>Round 1 to stray vacancy round guidance</li>
+          <li>College and specialty selection guidance</li>
+          <li>College-wise work-life balance and bed strength data</li>
+          <li>Important documentation checklist</li>
+          <li>Management/NRI quota admission guidance</li>
+          <li>Reservation quota insights and more</li>
+        </ul>
+        <a class="btn btn--outline" href="https://goocampus.in" target="_blank" rel="noopener">EXPLORE THE COMPLETE PROGRAM IN DETAILS</a>
+      </div>
+    </article>
+
+    <!-- 02 Australia -->
+    <article class="program program--flip reveal" id="program-australia">
+      <div class="program__media">
+        <span class="program__num">02</span>
+        <img src="/assets/program-australia.jpg" alt="Sydney Harbour, with the Opera House and the Harbour Bridge" width="900" height="620" loading="lazy">
+      </div>
+      <div class="program__body">
+        <h3>Australia Standard Consulting Program</h3>
+        <p>The Australia pathway has many moving parts, AMC exams, registration, English proficiency, visas and the job market, and getting the sequence or timing wrong can set you back months. This program gives you a structured, well-planned approach, with the right support at every stage.</p>
+        <p class="program__proof">376+ doctors enrolled, got the right guidance. Ready for yours?</p>
+        <p class="program__getLabel">Here's what you get:</p>
+        <ul class="ticks">
+          <li>Personalised Australia pathway plan</li>
+          <li>AMC MCQ and clinical training</li>
+          <li>English language training</li>
+          <li>Documentation and registration support</li>
+          <li>Hiring windows and job notifications</li>
+          <li>CV and interview prep support</li>
+          <li>Access to speak to practising Australian doctors</li>
+        </ul>
+        <a class="btn btn--outline" href="https://goocampusaustralia.com" target="_blank" rel="noopener">EXPLORE THE COMPLETE PROGRAM IN DETAILS</a>
+      </div>
+    </article>
+
+    <!-- 03 USA -->
+    <article class="program reveal" id="program-usa">
+      <div class="program__media">
+        <span class="program__num">03</span>
+        <img src="/assets/program-usa.jpg" alt="The Statue of Liberty in New York harbour" width="900" height="620" loading="lazy">
+      </div>
+      <div class="program__body">
+        <h3>USA Standard Consulting Program</h3>
+        <p>The USA pathway takes time, and one wrong step can delay the whole process. From USMLE exams to LORs and your Match strategy, everything needs to be planned in advance, this journey can't be figured out on the go, timing matters at every step.</p>
+        <p class="program__proof">98+ doctors enrolled, got the right guidance. Yours is next.</p>
+        <p class="program__getLabel">Here's what you get:</p>
+        <ul class="ticks">
+          <li>USMLE pathway plan</li>
+          <li>USMLE exam prep guidance</li>
+          <li>LOR and experience letter assistance</li>
+          <li>ERAS application and Match strategy</li>
+          <li>Documentation support</li>
+        </ul>
+        <a class="btn btn--outline" href="/usa-pathway/" target="_blank" rel="noopener">EXPLORE THE COMPLETE PROGRAM IN DETAILS</a>
+      </div>
+    </article>
+
+    <!-- 04 GCC -->
+    <article class="program program--flip reveal" id="program-gulf">
+      <div class="program__media">
+        <span class="program__num">04</span>
+        <img src="/assets/program-gulf.jpg" alt="High-rise towers along Sheikh Zayed Road in Dubai" width="900" height="620" loading="lazy">
+      </div>
+      <div class="program__body">
+        <h3>GCC Licensing and Career Support Program</h3>
+        <p>Dubai, Abu Dhabi, Saudi Arabia, Qatar and beyond each have their own exams and governing bodies, so one strategy doesn't work everywhere. With limited exam attempts allowed, your first step matters, so you get it right the first time.</p>
+        <p class="program__proof">134+ doctors enrolled, got the right guidance. Let's start yours.</p>
+        <p class="program__getLabel">Here's what you get:</p>
+        <ul class="ticks">
+          <li>Prometric licensing exam prep guidance</li>
+          <li>Data flow assistance</li>
+          <li>Documentation support</li>
+          <li>Job notifications and hospital-wise interview tips</li>
+          <li>Interview prep and negotiation tips</li>
+          <li>Guidance from practising UAE doctors</li>
+        </ul>
+        <a class="btn btn--outline" href="/gulf-pathway/" target="_blank" rel="noopener">EXPLORE THE COMPLETE PROGRAM IN DETAILS</a>
+      </div>
+    </article>
+
+    <!-- 05 ALS -->
+    <article class="program reveal">
+      <div class="program__media">
+        <span class="program__num">05</span>
+        <img src="/assets/program-als.jpg" alt="Two clinicians practising airway management on a training manikin" width="900" height="620" loading="lazy">
+      </div>
+      <div class="program__body">
+        <h3>Advanced Life Support (ALS) Certificate Program</h3>
+        <p>Want to earn CPD points and stand out in your job applications in the UK and Australia? Enroll in our comprehensive 2-day ALS course in India and gain the skills to provide critical life support in emergencies, from India's only ERC-certified ALS provider, recognised in the UK and Australia.</p>
+        <a class="btn btn--outline" href="https://alscourse.com" target="_blank" rel="noopener">EXPLORE THE PROGRAM IN DETAILS</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. WHY CHOOSE GOOCAMPUS
+     ============================================================ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why__head reveal">
+      <span class="pill pill--onDark">Why Choose GooCampus</span>
+      <h2 class="section-title section-title--onDark">WHY CHOOSE GOOCAMPUS</h2>
+    </div>
+    <ul class="why__grid">
+      <li class="reveal">Right-country guidance based on an eligibility check first</li>
+      <li class="reveal">1:1 personalised pathway plan, wherever you are in your career</li>
+      <li class="reveal">Country-specific counsellors who know your pathway inside out</li>
+      <li class="reveal">Regular progress calls to guide your next steps</li>
+      <li class="reveal">Two-way support, reach out with any doubt, anytime</li>
+      <li class="reveal">Honest, ground-reality advice, no false promises</li>
+      <li class="reveal">Clear, accurate timelines and costs, always</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. FINAL CTA
+     ============================================================ -->
+<section class="cta">
+  <img class="cta__bg" src="/assets/cta-band.jpg" alt="" width="1800" height="760" loading="lazy">
+  <div class="wrap cta__inner reveal">
+    <h2>Ready to plan your medical PG career abroad?</h2>
+    <p>Explore our services, and if you're confused about which country to choose, let our counsellors guide you.</p>
+    <a class="btn btn--solid btn--lg" href="#programs">EXPLORE NOW</a>
+  </div>
+</section>
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="foot" id="contact">
-  <div class="shell">
-    <div class="foot-grid">
-      <div>
-        <img src="assets/logo.png" alt="GooCampus" width="1080" height="1080" />
-        <p style="margin-top:1rem;max-width:34ch">Helping doctors plan their medical PG career across India, Australia, USA, the Gulf and beyond.</p>
-      </div>
-      <div>
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="https://goocampus.in" target="_blank" rel="noopener noreferrer">India NEET PG</a></li>
-          <li><a href="https://goocampusaustralia.com" target="_blank" rel="noopener noreferrer">Australia</a></li>
-          <li><a href="/usa-pathway/" target="_blank" rel="noopener noreferrer">USA</a></li>
-          <li><a href="/gulf-pathway/" target="_blank" rel="noopener noreferrer">Gulf</a></li>
-          <li><a href="https://alscourse.com" target="_blank" rel="noopener noreferrer">ALS Certificate</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact Us</h4>
-        <p><strong style="color:var(--ink);font-weight:600">India Office</strong><br />
-          138/6, Ground Floor, 10th Main Road, Sadashiv Nagar, 6th A Cross Rd,
-          behind SBI Bank, Raj Mahal Vilas Extension, Bengaluru, Karnataka 560080</p>
-        <ul style="margin-top:1rem">
-          <li><a href="tel:+918041743956">080-41743956</a></li>
-          <li><a href="mailto:info@goocampus.in">info@goocampus.in</a></li>
-        </ul>
-      </div>
+
+<!-- ============================================================
+     7. FOOTER
+     ============================================================ -->
+<footer class="footer" id="contact">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="/assets/logo-white.png" alt="GooCampus" width="150" height="129">
+      <p class="footer__name">GooCampus</p>
     </div>
-    <p class="foot-bottom">&copy; 2026 GooCampus. All rights reserved.</p>
+    <div class="footer__details">
+      <p class="footer__address"><span>India Office:</span> 138/6, Ground Floor, 10th Main Road, Sadashiv Nagar, 6th A Cross Rd, behind SBI Bank, Raj Mahal Vilas Extension, Bengaluru, Karnataka 560080</p>
+      <p><span>Phone:</span> <a href="tel:+918041743956">080-41743956</a></p>
+      <p><span>Email:</span> <a href="mailto:info@goocampus.in">info@goocampus.in</a></p>
+    </div>
   </div>
 </footer>
 
-<script>
-  // Reveal on scroll. The hidden state only exists under .js, and anything on
-  // screen is revealed immediately, so a throttled observer can never strand
-  // content invisible.
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const targets = document.querySelectorAll('[data-reveal]');
-  if (reduce || !('IntersectionObserver' in window)) {
-    targets.forEach(el => el.classList.add('in'));
-  } else {
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-    }, { threshold: .08, rootMargin: '0px 0px -6% 0px' });
-    targets.forEach(el => io.observe(el));
-    // Safety net: anything still hidden after 2.5s is shown regardless.
-    setTimeout(() => targets.forEach(el => {
-      const r = el.getBoundingClientRect();
-      if (r.top < innerHeight && r.bottom > 0) el.classList.add('in');
-    }), 2500);
-  }
-</script>
-
+<script src="/js/main.js" defer></script>
 </body>
 </html>
