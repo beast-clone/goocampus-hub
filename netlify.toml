@@ -26,9 +26,9 @@
 # gcc.goocampusglobal.com (single source; the address here stays /gulf-pathway/).
 # gulf-pathway/privacy.html is still a real file here, so it is served as before.
 [[redirects]]
-  from = "/gulf-pathway"
-  to = "/gulf-pathway/"
-  status = 301
+  from = "/gulf-pathway/"
+  to = "https://gcc.goocampusglobal.com/"
+  status = 200
 
 [[redirects]]
   from = "/gulf-pathway/*"
