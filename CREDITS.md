@@ -11,3 +11,5 @@ CC0 — no licence fee, no attribution obligation. Credited anyway.
 
 The Gulf photograph (Dubai), the ALS training photograph, the closing banner and
 the logo are GooCampus's own files, reused from our existing landing pages.
+
+| Germany card | Brandenburg Gate photograph, reused from the Germany landing page (germany.goocampusglobal.com) | as on that page |

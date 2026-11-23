@@ -1,54 +1,43 @@
 /*
   GooCampus hub — the only script on the page.
-
-  Two small things, both optional:
-    1. sections fade up as they scroll into view
-    2. the three headline numbers count up the first time they are seen
-
-  If this file fails to load, or the visitor asks their system for reduced
-  motion, everything is simply shown straight away.
+    1. the nav gets a hairline once the page scrolls
+    2. the phone menu opens and closes
+    3. the arrow buttons move the programs row one card at a time
+  Without this file the page still works: the menu links stay in the footer and the row scrolls by touch.
 */
 (function () {
-  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('is-scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  if (reduced || !('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('in'); });
-    return;
+  var toggle = nav.querySelector('.nav__toggle');
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
+  toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+  nav.querySelectorAll('.nav__links a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
 
-  // --- fade sections in, slightly staggered within a row -------------------
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e, i) {
-      if (!e.isIntersecting) return;
-      e.target.style.transitionDelay = (i * 0.06).toFixed(2) + 's';
-      e.target.classList.add('in');
-      io.unobserve(e.target);
-      if (e.target.querySelector('[data-count]')) countUp(e.target);
-      if (e.target.hasAttribute('data-count')) countUp(e.target.parentElement);
+  var rail = document.getElementById('rail');
+  document.querySelectorAll('[data-rail]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = rail.querySelector('.prog');
+      var step = card ? card.getBoundingClientRect().width + 20 : 320;
+      rail.scrollBy({ left: step * Number(b.dataset.rail), behavior: 'smooth' });
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  });
 
-  items.forEach(function (el) { io.observe(el); });
-
-  // --- count the headline numbers up once ---------------------------------
-  function countUp(scope) {
-    scope.querySelectorAll('[data-count]').forEach(function (el) {
-      if (el.dataset.done) return;
-      el.dataset.done = '1';
-      var target = parseInt(el.dataset.count, 10);
-      var suffix = el.dataset.suffix || '';
-      var start = null;
-      var duration = 1100;
-      function frame(now) {
-        if (start === null) start = now;
-        var p = Math.min((now - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(target * eased).toLocaleString('en-IN') + suffix;
-        if (p < 1) requestAnimationFrame(frame);
-      }
-      el.textContent = '0' + suffix;
-      requestAnimationFrame(frame);
+  // a chip in the hero scrolls the programs row to that card
+  document.querySelectorAll('.chips a').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var card = document.querySelector(a.getAttribute('href'));
+      if (!card) return;
+      e.preventDefault();
+      document.getElementById('programs').scrollIntoView({ behavior: 'smooth' });
+      rail.scrollTo({ left: card.offsetLeft - rail.offsetLeft - parseFloat(getComputedStyle(rail).paddingLeft), behavior: 'smooth' });
     });
-  }
+  });
 })();
