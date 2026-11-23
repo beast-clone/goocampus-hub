@@ -21,3 +21,16 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# The Gulf programme page is the latest GCC Prometric page, served from
+# gcc.goocampusglobal.com (single source; the address here stays /gulf-pathway/).
+# gulf-pathway/privacy.html is still a real file here, so it is served as before.
+[[redirects]]
+  from = "/gulf-pathway"
+  to = "/gulf-pathway/"
+  status = 301
+
+[[redirects]]
+  from = "/gulf-pathway/*"
+  to = "https://gcc.goocampusglobal.com/:splat"
+  status = 200
